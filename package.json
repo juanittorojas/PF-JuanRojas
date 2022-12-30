@@ -1,23 +1,21 @@
 {
   "name": "preentrega3-juanrojas",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juanittorojas/preentregar-juanrojas"
+    "url": "git+https://github.com/juanittorojas/preentrega3-juanrojas.git"
   },
-  "author": "",
+  "author": "Juan Rojas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/juanittorojas/preentregar-juanrojas/issues"
+    "url": "https://github.com/juanittorojas/preentrega3-juanrojas/issues"
   },
-  "homepage": "https://github.com/juanittorojas/preentregar-juanrojas#readme",
+  "homepage": "https://github.com/juanittorojas/preentrega3-juanrojas#readme",
+  "description": "",
   "devDependencies": {
     "node-sass": "^8.0.0",
     "nodemon": "^2.0.20"
