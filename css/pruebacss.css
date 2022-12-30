@@ -1,0 +1,431 @@
+/*Variables*/
+/* SCSS */
+body {
+  margin: 0;
+  overflow-x: hidden; }
+
+html {
+  font-family: 'Red Hat Display', sans-serif; }
+
+/* Header & Nav style */
+header {
+  display: flex;
+  width: 100vw;
+  height: 150px;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.logo img {
+  margin-top: 25px;
+  width: 400px; }
+
+.headerList {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  margin-right: 50px;
+  margin-top: 67px; }
+
+.navButton {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  background-color: white;
+  font-size: 16px;
+  transition: all;
+  transition-duration: 0.5s; }
+  .navButton:hover {
+    background-color: #ced8e0; }
+
+.divisionBar {
+  background-color: #ced8e0;
+  height: 15px;
+  width: 100vw; }
+
+/* Footer style */
+footer {
+  background-color: #f6dade;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: space-between; }
+
+.datosFooter {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 20px;
+  margin-top: 25px; }
+
+.footerZonas {
+  margin-right: 50px;
+  display: flex; }
+
+.locationLogo {
+  margin-top: 20px;
+  margin-left: 10px; }
+
+.listUbication {
+  padding: 0%;
+  margin-left: 15px;
+  list-style: none; }
+
+.datosTelefono {
+  margin-left: 10px;
+  margin-top: 20px;
+  display: flex;
+  margin-right: 50px; }
+
+.phoneNumber {
+  margin-left: 10px; }
+
+/* Inicio page style */
+.homeSection {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  align-items: center;
+  justify-content: center; }
+
+.imagenMascotasHome {
+  width: 500px;
+  margin-right: 50px;
+  margin-top: 50px;
+  float: left;
+  transition: width;
+  transition-duration: 0.4s; }
+  .imagenMascotasHome:hover {
+    width: 510px; }
+
+.homeSectionTitle {
+  margin-top: 50px;
+  font-size: 30px;
+  width: 500px;
+  text-align: justify; }
+
+.homeSectionText {
+  margin-top: 50px;
+  text-align: justify;
+  margin-right: 50px;
+  font-size: 20px;
+  width: 500px; }
+
+.homeAptitudes {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ced8e0;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding-bottom: 50px; }
+
+.homeAptitudesImage {
+  background-color: white;
+  border-radius: 50%;
+  width: 150px;
+  transition: all;
+  transition-duration: 0.4s; }
+  .homeAptitudesImage:hover {
+    box-shadow: 5px 2px gray;
+    width: 160px; }
+
+.aptitudes {
+  margin: 100px 100px 100px 100px;
+  width: 150px;
+  height: 300px; }
+
+.aptitudTitle {
+  text-align: center;
+  margin-top: 25px; }
+
+.aptitudText {
+  text-align: justify;
+  margin-top: 25px;
+  width: 200px;
+  margin-left: -20px; }
+
+.titleAtencion {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  font-size: 45px; }
+
+/* Servicios style */
+.serviciosSectionTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+
+.serviciosSectionBottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 100px; }
+
+.servicioTitle {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: bold; }
+
+.servicioImage {
+  width: 150px;
+  padding-left: 65x;
+  margin-top: 100px;
+  transition: all;
+  transition-duration: 0.4s; }
+  .servicioImage:hover {
+    width: 160px; }
+
+.servicioText {
+  width: 300px;
+  text-align: justify; }
+
+.serviciosBox {
+  text-align: center; }
+
+/* Nosotros style */
+.pageTitle {
+  text-align: center;
+  margin-top: 75px;
+  font-size: 30px;
+  font-weight: bold; }
+
+.nosotrosSection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.nosotrosImageCar {
+  width: 300px;
+  padding-right: 200px; }
+
+.nosotrosSectionText {
+  padding-right: 20px;
+  padding-top: 55px;
+  text-align: justify;
+  width: 500px; }
+
+.exclamaNosotros {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 50px; }
+
+.dogNosotrosImageBox {
+  display: flex;
+  justify-content: center; }
+
+.dogNosotrosImage {
+  width: 300px;
+  margin-top: 100px; }
+
+/* Contacto style */
+.contactoTextTop {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 50px; }
+
+.contactoTextBottom {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px; }
+
+.formContacto {
+  display: flex;
+  justify-content: center; }
+
+.formBoxOne {
+  width: 85vw;
+  margin-top: 5px;
+  margin-bottom: 15px; }
+
+.formBoxTwo {
+  width: 85vw;
+  resize: none;
+  margin-top: 5px; }
+
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.buttonSend {
+  padding: 5px 50px; }
+
+/* Tecnologia style */
+.faqsSection {
+  margin-left: 100px;
+  padding-right: 100px;
+  margin-top: 50px;
+  margin-bottom: 75px; }
+
+.faqAnswer {
+  text-align: justify;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding-left: 50px;
+  width: 80vw; }
+
+.accordion {
+  margin-top: 70px;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 70px; }
+
+/* Mobile style */
+@media screen and (max-width: 480px) {
+  /* Header style mobile */
+  header {
+    padding-left: 20px;
+    padding-bottom: 70px; }
+  #divisionBarFaqs {
+    margin-top: 40px; }
+  .logo img {
+    width: 80vw; }
+  .headerList {
+    width: auto;
+    margin-top: 25px; }
+  /* Footer style mobile */
+  footer {
+    padding-left: 20px; }
+  /* Inicio page style mobile */
+  .homeSection {
+    display: flex; }
+  .imagenMascotasHome {
+    width: 70vw;
+    float: none; }
+  .homeSectionTitle {
+    width: 90vw;
+    text-align: center;
+    font-size: 28px; }
+  .homeSectionText {
+    width: 90vw;
+    text-align: justify;
+    font-size: 20px;
+    margin: 50px 0px 0px 0px; }
+  .titleAtencion {
+    font-size: 25px; }
+  .aptitudes {
+    height: auto; }
+  .homeAptitudes {
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 50px; }
+  .homeAptitudesImage {
+    width: 200px; }
+  .aptitudTitle {
+    width: 200px;
+    font-size: 25px; }
+  .aptitudText {
+    width: 300px;
+    margin-left: -40px;
+    font-size: 18px; }
+  /* Nosotros style mobile */
+  .nosotrosSection {
+    display: flex;
+    justify-content: center; }
+  .nosotrosImageCar {
+    width: 250px;
+    padding-left: 200px;
+    padding-top: 50px; }
+  .nosotrosSectionText {
+    text-align: justify;
+    width: 90vw;
+    padding-top: 20px; }
+  .exclamaNosotros {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 50px; }
+  .dogNosotrosImageBox {
+    display: flex;
+    justify-content: center; }
+  .dogNosotrosImage {
+    width: 200px;
+    margin-top: 30px; }
+  /* Contacto mobile style */
+  .contactoTextTop {
+    padding: 0 10px; }
+  .contactoTextBottom {
+    padding: 0 10px; }
+  /* Tecnologia style mobile */
+  .faqs {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    width: 80vw; }
+  .faqsSection {
+    margin-left: 100px;
+    padding-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 75px; }
+  .faqAnswer {
+    text-align: justify;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding-left: 0px;
+    width: 80vw; } }
+
+/* Tablet style */
+@media screen and (min-width: 480px) and (max-width: 1200px) {
+  /* Header style tablet */
+  header {
+    padding-left: 20px;
+    padding-bottom: 70px;
+    display: block; }
+  #divisionBarFaqs {
+    margin-top: 70px; }
+  .logo img {
+    width: 400px; }
+  .headerList {
+    width: auto;
+    margin-top: 25px;
+    float: left; }
+  /* Footer style tablet */
+  footer {
+    padding-left: 20px; }
+  /* Inicio page style tablet */
+  .homeSection {
+    display: flex; }
+  .imagenMascotasHome {
+    width: 500px;
+    margin-left: 50px;
+    float: none; }
+  .homeSectionTitle {
+    width: 90vw;
+    text-align: center;
+    font-size: 28px; }
+  .homeSectionText {
+    width: 90vw;
+    text-align: justify;
+    font-size: 20px;
+    margin: 50px 0px 0px 0px; }
+  .homeAptitudes {
+    padding-bottom: 50px; }
+  .titleAtencion {
+    font-size: 30px; }
+  /* Nosotros style tablet*/
+  .nosotrosSection {
+    display: flex;
+    justify-content: center; }
+  .nosotrosImageCar {
+    width: 250px;
+    padding-left: 200px;
+    padding-top: 50px; }
+  .nosotrosSectionText {
+    text-align: justify;
+    font-size: 18px;
+    width: 90vw;
+    padding-top: 20px; }
+  .exclamaNosotros {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 50px; }
+  .dogNosotrosImageBox {
+    display: flex;
+    justify-content: center; }
+  .dogNosotrosImage {
+    width: 200px;
+    margin-top: 30px; } }
