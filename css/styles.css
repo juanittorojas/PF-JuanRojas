@@ -20,6 +20,14 @@ body{
   overflow-x: hidden;
   font-family: 'inter';
 }
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flexbox;
+  background-color: #ffffff;
+  margin-bottom: 130px;
+}
 .button{
   background: none;
   border: 2px solid var(--primary);
@@ -38,8 +46,10 @@ body{
   border-radius: 20px;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
   display: inline-block;
+  align-items: center;
   font-size: 1em;
 }
+
 .button:hover{
   color: rgb(255, 255, 255);
   background: linear-gradient(180deg, #72EC9F 0%, #5DC6C2 100%);
@@ -53,7 +63,7 @@ input,textarea{
   font-size: 1em;
 }
 .banner-image{
-  border-radius: 35px;
+  border-radius: 30px;
 }
 .imagen-circular{
   width: 250px;
@@ -79,6 +89,7 @@ h1,h2{
     opacity: 1;
   }
 }
+
 /* fonts */
 h1{
   color: #69CA83;
@@ -116,28 +127,11 @@ textarea{
 .copyright{
   color: #ffffff;
 }
-.pageTitle {
-  text-align: center;
-  margin-top: 75px;
-  font-size: 30px;
-  font-weight: bold; }
-
-.nosotrosSection {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
-
-.nosotrospersonas {
-  padding-right: 200px; }
-
-.nosotrosSectionText {
-  padding-right: 20px;
-  padding-top: 55px;
-  text-align: justify;
-  width: 500px; }
-
-/* mobile styles */
-@media screen and (min-width: 320px){
+/* MEDIDAS PARA CELULARES O MOVIL */
+@media screen and (min-width: 280px) and (max-width: 619px){
+.site-nav li{
+    font-size: 0.75rem; 
+}
 .grid{
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -145,7 +139,7 @@ textarea{
   box-sizing: border-box;
 }
 .site-nav{
-  margin: 0 20px;
+  margin: 0 10px;
 }
 .site-nav img{
   grid-column: 1/4;
@@ -164,39 +158,45 @@ textarea{
 .site-nav li{
   margin-left: 8px;
 }
-
-
-
-#inicio{
-  padding: 0 20px 20px 20px;
+.nav-inicio{
+  display: none;
 }
-.inicio-text{
-  grid-column: 1/6;
+.logonegro{
+  width: 95%;
+  padding-top: 5px;
+}
+#inicio{
+  padding-top: 90px;
+  padding-bottom: 20px;
 }
 .inicio-text a{
-  margin: 20px 0;
+  text-align: center;
+  margin: 20px;
 }
-.inicio-img{
-  grid-column: 6/9;
+.inicio-text{
+  text-align: center;
+  margin: 20px;
 }
-.inicio-img img{
-  width: 200%;
-  border-radius: 10%;
+.banner-image {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  height: auto;
+  object-fit: cover;
 }
 #servicios{
   background: url(img/square_bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
-  padding: 30px 20px;
+  margin-top: 6em;
 }
 #servicios h3{
-  margin-bottom: 0;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
-.servicios{
-  margin: 20px 0;
-}
+
 .servicios a{
   grid-column: 1/9;
   display: flex;
@@ -211,7 +211,7 @@ textarea{
   color: #000000
 }
 #como-funciona{
-  padding: 30px 20px;
+  padding-top: 90px;
   background: #ffffff;
 }
 #como-funciona h3{
@@ -234,8 +234,29 @@ textarea{
   text-align: center;
   margin: 0 20px;
 }
+#nosotros{
+  margin-top: 8em;
+}
+.pageTitleNos {
+  text-align: center;
+  margin-top: 75px;
+  font-size: 30px;
+  font-weight: bold; }
+
+.nosotrospersonas {
+    display: block;
+    margin: auto;
+    max-width: 60%;
+  }
+.nosotrosSectionText {
+  padding-top: 1em;
+  text-align: justify;
+  width: auto; 
+  margin-left: 2em;
+  margin-right: 2em;
+}
 #contact{
-  padding: 30px 20px;
+  padding: 5em 2em 2em 2em;
   background: #f7f7f9;
 }
 #contact h3, #contact p{
@@ -243,14 +264,17 @@ textarea{
   text-align: center;
 }
 #contact form{
-  width: 80%;
-  max-width: 400px;
-  margin: 20px auto;
-  text-align: center;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 #contact input,#contact textarea{
   width: 100%;
   margin: 10px 0;
+  display: flex;
+  justify-content: center;
 }
 #contact textarea{
   max-width: 100%;
@@ -265,13 +289,15 @@ footer{
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: top center;
+  position: absolute;
+  width: auto;
 }
 footer .copyright{
   grid-column: 1/3;
   font-size: 0.8em;
 }
 footer .social{
-  grid-column: 7/9;
+  grid-column: 6/9;
   display: flex;
   justify-content: flex-end;
 }
@@ -279,182 +305,513 @@ footer li{
   margin: 0 6px;
 }
 footer img{
-  width: 20px;
+  width: 1em;
 }
 }
-.nosotrosSection {
-  display: flex;
-  justify-content: center; }
-.nosotrospersonas {
-  width: 250px;
-  padding-left: 200px;
-  padding-top: 50px; }
-.nosotrosSectionText {
-  text-align: justify;
-  width: 90vw;
-  padding-top: 20px; }
-.exclamaNosotros {
-  text-align: center;
-  font-size: 25px;
-  padding-top: 50px; }
-.dogNosotrosImageBox {
-  display: flex;
-  justify-content: center; }
-.dogNosotrosImage {
-  width: 200px;
-  margin-top: 30px; }
-/* small tablet styles */
-@media screen and (min-width: 620px){
-
-  .inicio-text{
-    grid-column: 1/5;
-  }
-  .inicio-img{
-    grid-column: 5/9;
-  }
-  .inicio-img img{
-    width: 100%;
-    border-radius: 10%;
-  }
-  .servicios{
-    margin-top: 40px;
-  }
-  .servicios a{
-    grid-column: span 4;
-    display: block;
-    margin: 20px 0;
-  }
-  .servicios a:last-child{
-    grid-column: 3/7;
-  }
-  .servicios a *{
-    margin: 10px;
-    max-width: 60%;
-    margin: 10px 20%;
-  }
-  .servicios h4{
-    text-align: center;
-  }
-  #como-funciona{
-    padding: 30px 100px;
-  }
-  footer{
-    background-size: 20%;
-  }
-
-}
-
-/* large tablet & laptop styles */
-@media screen and (min-width: 960px){
-
-  body{
-    font-size: 18px;
+/* MEDIDAS PARA TABLETS PEQUENAS */
+@media screen and (min-width: 620px) and (max-width: 959px) {
+  .site-nav li{
+      font-size: 1rem; 
   }
   .grid{
-    max-width: 1060px;
-    margin: 0 auto;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
   }
-  .leading{
-    margin: 20px 0;
+  .logonegro{
+    margin-left: 20px;
   }
   .site-nav{
-    padding: 0 20px;
+    margin: 0 10px;
   }
-  .site-nav h1{
+  .site-nav img{
+    grid-column: 1/4;
+    grid-row: 1;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+  }
+  
+  .site-nav ul{
+    display: flex;
+    grid-column: 6/9;
+    justify-content: flex-end;
+    align-self: center;
+    margin-right: 50px;
+  }
+  .site-nav li{
+    margin-left: 8px;
+  }
+  #inicio {
+    margin: 130px 30px 30px 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  .inicio-text {
+    flex: 2; 
+    float: left;
+    padding-right: 2em;
+  }
+  
+  .banner-image {
+    flex: 1; 
+    display: inline-block;
+    margin-top: 0px;
+    max-width: 50%;
+
+  }
+  #servicios{
+    background: url(img/square_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin-top: 6em;
+  }
+  #servicios h3{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .servicios a{
+    grid-column: 1/9;
+    display: flex;
+    margin: 20px 0
+  }
+  .servicios a *{
+    margin: 0 60px;
+    align-self: center;
+  }
+  .servicios h4{
+    color: #000000
+  }
+  #como-funciona{
+    padding-top: 90px;
+    background: #ffffff;
+  }
+  #como-funciona h3{
+    text-align: center;
+  }
+  #como-funciona ul{
+    margin: 40px 130px 20px 130px;
+  }
+  #como-funciona li{
+    padding: 10px;
+    background: rgba(101, 175, 128, 0.2);
+    grid-column: span 4;
+    text-align: center;
+  }
+  #como-funciona img{
+    height: 80px;
+    margin: 10px auto;
+  }
+  #como-funciona p{
+    text-align: center;
+    margin: 0 150px;
+  }
+  #nosotros{
+    margin-top: 6em;
+  }
+  .pageTitleNos {
+    text-align: center;
+    margin-top: 75px;
+    font-size: 30px;
+    font-weight: bold; 
+  }
+  .nosotrospersonas {
+      display: block;
+      margin: auto;
+      width: 350px;
+    }
+  .nosotrosSectionText {
+    padding-top: 1em;
+    text-align: justify;
+    width: auto; 
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  #contact{
+    padding: 6em 10em;
+    background: #f7f7f9;
+  }
+  #contact h3, #contact p{
+    margin-bottom: 0;
+    text-align: center;
+  }
+  #contact form{
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  #contact input,#contact textarea{
+    width: 100%;
+    margin: 10px 0;
+  }
+  #contact textarea{
+    max-width: 100%;
+    height: 200px;
+  }
+  #contact .button{
+    margin-top: 10px;
+  }
+  footer{
+    position: relative;
+    padding: 30px 20px;
+    background-color: #282828;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  footer .copyright{
     grid-column: 1/3;
+    font-size: 0.8em;
+    margin-left: 3em;
+  }
+  footer .social{
+    grid-column: 6/9;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3em;
+  }
+  footer li{
+    margin: 0 6px;
+  }
+  footer img{
+    width: 1em;
+  }
+}
+/* MEDIDAS SIZE PARA TABLETS Y LAPTOPS */
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+  .site-nav li{
+      font-size: 1rem; 
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  .site-nav{
+    margin: 0 10em;
+  }
+  .site-nav img{
+    grid-column: 1/4;
+    grid-row: 1;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
   }
   .site-nav ul{
     display: flex;
     grid-column: 6/9;
     justify-content: flex-end;
     align-self: center;
+    margin-right: 50px;
   }
   .site-nav li{
-    margin-left: 20px;
+    margin-left: 8px;
   }
-  .inicio-text{
-    grid-column: 1/5;
-    align-self: center;
+  #inicio {
+    margin: 130px 15% 30px 15%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
   }
-  #inicio{
-    padding-bottom: 40px;
+  
+  .inicio-text {
+    flex: 2; 
+    float: left;
+    padding-right: 2em;
+  }
+  
+  .banner-image {
+    flex: 1; 
+    display: inline-block;
+    margin-top: 0px;
+    max-width: 45%;
+  }
+  #servicios{
+    margin-top: 6em;
   }
   .servicios a:nth-child(1){
     grid-column: 2/4;
-  }
+    }
   .servicios a:nth-child(2){
     grid-column: 4/6;
     padding-top: 140px;
-  }
+    }
   .servicios a:nth-child(3){
     grid-column: 6/8;
-  }
+    }
   .servicios a *{
     max-width: 80%;
     margin: 30px 10%;
+    }
+  .servicios h3{
+    text-align: center;
   }
   #como-funciona{
-    padding: 30px 20px;
+    padding-top: 90px;
+    background: #ffffff;
+  }
+  #como-funciona h3{
+    text-align: center;
   }
   #como-funciona ul{
-    margin: 40px auto;
+    margin: 40px 130px 20px 130px;
   }
   #como-funciona li{
-    grid-column: span 2;
+    padding: 10px;
+    background: rgba(101, 175, 128, 0.2);
+    grid-column: span 4;
+    text-align: center;
+  }
+  #como-funciona img{
+    height: 80px;
+    margin: 10px auto;
   }
   #como-funciona p{
-    max-width: 600px;
-    margin: 40px auto;
+    text-align: center;
+    margin: 0 150px;
   }
-  footer{
-    background-size: 20%;
-    padding: 40px 20px;
+  #nosotros{
+    margin-top: 6em;
   }
-
-}
-
-/* desktop styles */
-@media screen and (min-width: 1200px){
-
-  body{
-    font-size: 20px;
+  .pageTitleNos {
+    text-align: center;
+    margin-top: 75px;
+    font-size: 30px;
+    font-weight: bold; }
+  
+  .nosotrospersonas {
+      display: block;
+      margin: auto;
+      width: 400px;
+    }
+  .nosotrosSectionText {
+    padding-top: 1em;
+    text-align: justify;
+    width: auto; 
+    margin-left: 10em;
+    margin-right: 10em;
   }
-  .site-nav{
-    padding: 0;
+  #contact{
+    padding: 6em 10em;
+    background: #f7f7f9;
   }
-  #inicio, #home, #como-funciona, #contact{
-    padding: 90px 0;
+  #contact h3, #contact p{
+    margin-bottom: 0;
+    text-align: center;
   }
-  .leading{
-    margin: 20px 0;
+  #contact form{
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
   }
-  .servicios a:nth-child(1){
-    grid-column: 1/3;
+  #contact input,#contact textarea{
+    width: 100%;
+    margin: 10px 0;
   }
-  .servicios a:nth-child(2){
-    grid-column: 4/6;
-    padding-top: 140px;
-  }
-  .servicios a:nth-child(3){
-    grid-column: 7/9;
-  }
-  .servicios a *{
+  #contact textarea{
     max-width: 100%;
-    margin: 30px 0%;
+    height: 200px;
+  }
+  #contact .button{
+    margin-top: 10px;
   }
   footer{
-    padding: 80px 0;
-    background-size: 30%;
+    position: relative;
+    padding: 30px 20px;
+    background-color: #282828;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
   }
   footer .copyright{
-    grid-column: 1/4;
+    grid-column: 1/3;
+    font-size: 0.8em;
+    margin-left: 3em;
   }
   footer .social{
     grid-column: 6/9;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3em;
+  }
+  footer li{
+    margin: 0 6px;
   }
   footer img{
-    width: 30px;
+    width: 1em;
   }
-
+}
+/* MEDIDAS PARA DESKTOP */
+@media screen and (min-width: 1200px) and (max-width:2560px) {
+  .site-nav li{
+      font-size: 1.2rem; 
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  .site-nav{
+    margin: 0 10em;
+  }
+  .site-nav img{
+    grid-column: 1/4;
+    grid-row: 1;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+  }
+  .site-nav ul{
+    display: flex;
+    grid-column: 6/9;
+    justify-content: flex-end;
+    align-self: center;
+    margin-right: 50px;
+  }
+  .site-nav li{
+    margin-left: 8px;
+  }
+  #inicio {
+    margin: 10em 15em 4em 15em;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .inicio-text {
+    flex: 2; 
+    float: left;
+    padding-right: 2em;
+  }
+  .banner-image {
+    flex: 1; 
+    display: inline-block;
+    margin-top: 0px;
+    max-width: 45%;
+  }
+  #servicios{
+    margin: 6em 200px 0em 200px;
+  }
+  .servicios a:nth-child(1){
+    grid-column: 2/4;
+    }
+  .servicios a:nth-child(2){
+    grid-column: 4/6;
+    padding-top: 140px;
+    }
+  .servicios a:nth-child(3){
+    grid-column: 6/8;
+    }
+  .servicios a *{
+    align-items: center;
+    max-width: 80%;
+    margin: 30px 10%;
+    }
+  .servicios h3{
+    text-align: center;
+  }
+  #como-funciona{
+    padding-top: 90px;
+    margin: 2em 200px 2em 200px;
+  }
+  #como-funciona h3{
+    text-align: center;
+  }
+  #como-funciona ul{
+    margin: 40px 130px 20px 130px;
+  }
+  #como-funciona li{
+    padding: 10px;
+    background: rgba(101, 175, 128, 0.2);
+    grid-column: span 4;
+    text-align: center;
+  }
+  #como-funciona img{
+    height: 80px;
+    margin: 10px auto;
+  }
+  #como-funciona p{
+    text-align: center;
+    margin: 0 150px;
+  }
+  #nosotros{
+    margin-top: 6em;
+  }
+  .pageTitleNos {
+    text-align: center;
+    margin-top: 75px;
+    font-size: 30px;
+    font-weight: bold; }
+  
+  .nosotrospersonas {
+      display: block;
+      margin: auto;
+      width: 400px;
+    }
+  .nosotrosSectionText {
+    padding-top: 1em;
+    text-align: justify;
+    width: auto; 
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+  #contact{
+    padding: 6em 10em;
+    background: #f7f7f9;
+  }
+  #contact h3, #contact p{
+    margin-bottom: 0;
+    text-align: center;
+  }
+  #contact form{
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  #contact input,#contact textarea{
+    width: 100%;
+    margin: 10px 0;
+  }
+  #contact textarea{
+    max-width: 100%;
+    height: 200px;
+  }
+  #contact .button{
+    margin-top: 10px;
+  }
+  footer{
+    position: relative;
+    padding: 30px 20px;
+    background-color: #282828;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  footer .copyright{
+    grid-column: 1/3;
+    font-size: 0.8em;
+    margin-left: 3em;
+  }
+  footer .social{
+    grid-column: 6/9;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3em;
+  }
+  footer li{
+    margin: 0 6px;
+  }
+  footer img{
+    width: 1.5em;
+  }
 }
